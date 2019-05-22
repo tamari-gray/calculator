@@ -1,0 +1,11 @@
+.center{
+  margin: auto;
+}
+
+.border{
+  border: thin solid red;
+}
+
+body{
+  text-align: center
+}

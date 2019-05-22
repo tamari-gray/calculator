@@ -1,0 +1,66 @@
+listen to click event on every button
+save the text value of that button in "val"
+
+if val is a number or a fullstop then temp to += val. 
+(if 2 numbers are put in val = 52 not 7)
+
+grab the input field, display "temp" but only upto 9 decimals
+
+if val is AC:
+  clear past entries (set list to nothing)
+  set temp as a empty string
+  set total to 0
+  display empty string in text field
+
+if val is CE:
+  set temp to empty string
+  display empty string in text field
+
+if its a multiply or divide symbol
+  push the previous pushed button value to temp
+  then push / or x
+  then set temp to empty string so if its pushed twice it wont crash
+
+if its =
+  push temp (should be last pushed button) to entries list
+
+  convert the first entry in entries to a number and store it 
+
+  make a loop for entries
+    get the next number entry: access i + 1 to get the number after a symbol 
+    get the symbol (i)
+
+    if symbol is +
+      add nextnumbers value to nt (+=)
+
+    if its x
+      x nextnumbers value by nt (*=)
+
+    //same for other symbols
+
+    increment i????
+
+  if nt is less then 0: add - symbol to it
+
+  get text input field and set its value to nt
+  clear entries and temp
+
+  else: push temp and val to entries and set temp to '';
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+calculation
+
+display answer on text field
