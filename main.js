@@ -11,10 +11,11 @@ for (let i = 0; i < buttons.length; i++) {
 }
 
 function calc(button){
-  console.log(button);
+  // console.log(button);
+
 
   if (!isNaN(button) || button === ".") {
-    console.log('is a number')
+    // console.log('is a number')
     temp += button;
     input.value = temp;
   }else if (button === "AC") {
@@ -26,7 +27,46 @@ function calc(button){
     temp = "";
     input.value = "";
   }else if (button === "/"){
-    //hmmmmm
+    entries.push(temp);
+    entries.push('/');
+    PrevBtn = '/';
+    temp = '';
+  }else if (button === "x"){
+    entries.push(temp);
+    entries.push('x');
+    temp = '';
+  }else if (button === "+"){
+    entries.push(temp);
+    entries.push('+');
+    temp = '';
+  }else if (button === "-"){
+    entries.push(temp);
+    entries.push('-');
+    temp = '';
+  }else if (button === "="){
+    console.log('hi')
+    entries.push(temp);
+    input.value = entries
+
+    let firstNumber = entries[0];
+    let symbol = entries[1];
+    let secondNumber = entries[2];
+
+    if (symbol === '-') {
+      total = firstNumber - secondNumber;
+    }else if (symbol === '+') {
+      total = firstNumber + secondNumber;
+    }else if (symbol === '/') {
+      total = firstNumber / secondNumber;
+    }else if (symbol === 'x') {
+      total = firstNumber * secondNumber;
+    }
+
+    input.value = total;
+
+    entries = [];
+    temp = '';
+    
   }
 }
 
